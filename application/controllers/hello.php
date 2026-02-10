@@ -9,7 +9,8 @@ class hello extends CI_Controller {
 }
 public function namasaya()
 {
-  $data['nama'] = "Queen";
+  $data['nama'] = "Queen cantik";
   $this->load->view('hello_view',$data);
 }
+
 }
