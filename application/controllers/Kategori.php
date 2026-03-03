@@ -14,4 +14,17 @@ class Kategori extends CI_Controller{
         $this->load->view('kategori/index', $data);
 
     }
+    public function tambah()
+    {
+        $this->load->view('kategori/tambah');
+    }
+    public function simpan()
+    {
+        $data= [
+            'nama_kategori'=> $this->input->post('nama_kategori')
+        ];
+
+        $this->Kategori_model->insert($data);
+        redirect('kategori');
+    }
 }
