@@ -1,5 +1,9 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="a">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+        <div class="sidebar-brand-icon rotate-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
         <div class="sidebar-brand-text mx-3">Perpustakaan</div>
 </a>
 <li class="nav-item">
@@ -15,3 +19,5 @@
 </a>
 </li>
 </ul>
+<div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
