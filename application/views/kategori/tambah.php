@@ -1,13 +1,16 @@
-<h2> Tambah Kategori</h2>
-<a href="<?= site_url('kategori'); ?> ">Kembali</a>
-<br><br>
+<div class="container-fluid">
+<h2 class="h3 mb-4 text-gray-800">Tambah Kategori</h2>
 
-<form method="post" action="<?= site_url('kategori/simpan '); ?>">
-
+<div class="card shadow">
+    <div class="card body">
+<form method="post" action="<?= site_url('kategori/simpan'); ?>">
+    <div class="form-group">
     <label>Nama Kategori</label><br>
     <input type="text" name="nama_kategori" required>
-    <br><br>
+</div>
 
-    <button type="submit">Simpan</button>
-    <button type="reset">Reset</button>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+    <a href="<?= site_url('kategori');?>" class="btn btn-secondary">Kembali</a>
+
 </form>
+</div>
