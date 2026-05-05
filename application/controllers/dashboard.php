@@ -15,6 +15,7 @@ class dashboard extends CI_Controller{
     {
         $data['total_kategori']= $this->db->count_all('kategori');
         $data['total_buku']= $this->db->count_all('buku');
+        $data['total_anggota']= $this->db->count_all('anggota');
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');

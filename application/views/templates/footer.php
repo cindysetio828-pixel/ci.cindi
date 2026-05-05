@@ -27,7 +27,7 @@
 <script>
     var ctx= document.getElementById("chartDashboard");
     var chart= new Chart(ctx,{
-        type:'bar',
+        type:'polarArea',
         data:{
             labels:['Kategori', 'Buku'],
             datasets:[{
