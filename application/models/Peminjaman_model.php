@@ -25,7 +25,6 @@ class Peminjaman_model extends CI_Model
             'qty'           => 1
         ]);
 
-        // 🔥 FIX PENTING: pakai id_buku (bukan id)
         $this->db->set('stok', 'stok - 1', FALSE);
         $this->db->where('id_buku', $buku_id);
         $this->db->update('buku');
@@ -44,7 +43,6 @@ class Peminjaman_model extends CI_Model
     {
         $detail = $this->get_detail($id);
 
-        // 🔥 FIX typo get_where
         $pinjam = $this->db->get_where('peminjaman', ['id' => $id])->row();
 
         $today = date('Y-m-d');
@@ -67,7 +65,6 @@ class Peminjaman_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('peminjaman', ['status' => 'kembali']);
 
-        // 🔥 FIX utama: id_buku bukan id
         $this->db->set('stok', 'stok + 1', FALSE);
         $this->db->where('id_buku', $detail->buku_id);
         $this->db->update('buku');

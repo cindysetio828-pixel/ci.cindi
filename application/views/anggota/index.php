@@ -27,7 +27,7 @@
         <td><?= $N->Nama; ?></td>
         <td><?= $N->Telepon; ?></td>
         <td><?= $N->Email; ?></td>
-        <td><?= $N->status == 1 ? 'Aktif' : 'Tidak Aktif'; ?></td>
+        <td><?= $N->status == 'aktif' ? 'Aktif' : 'Tidak Aktif'; ?></td>
         <td>
             <a href="<?= site_url('anggota/edit/'.$N->Nomor_anggota); ?>" class="btn btn-warning btn-sm">Edit</a>
             
