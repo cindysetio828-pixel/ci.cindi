@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Cetak Laporan Peminjaman</title>
+<title>Cetak Laporan Buku</title>
 
 <style>
+
 body{
-    font-family:Arial;
+    font-family: Arial;
 }
 
 h3{
-    text-align:center;
+    text-align: center;
 }
 
 table{
     width:100%;
-    border-collapse:collapse;
+    border-collapse: collapse;
 }
 
 table, th, td{
@@ -32,36 +32,36 @@ th, td{
         display:none;
     }
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<h3>LAPORAN PEMINJAMAN</h3>
+<h3>LAPORAN BUKU</h3>
 
-<?php if(!empty($bulan)): ?>
-<p>Bulan: <?= $bulan; ?></p>
+<?php if(!empty($nama_kategori)): ?>
+<p>Kategori : <?= $nama_kategori; ?></p>
 <?php endif; ?>
 
 <table>
 
 <tr>
     <th>No</th>
-    <th>Kode</th>
-    <th>Nama</th>
-    <th>Tanggal</th>
-    <th>Status</th>
+    <th>Judul Buku</th>
+    <th>Penulis</th>
+    <th>Kategori</th>
+    <th>Stok</th>
 </tr>
 
 <?php $no=1; foreach($data as $d): ?>
 
 <tr>
     <td><?= $no++; ?></td>
-    <td><?= $d->kode_peminjaman; ?></td>
-    <td><?= $d->Nama; ?></td>
-    <td><?= $d->tanggal_pinjam; ?></td>
-    <td><?= $d->status; ?></td>
+    <td><?= $d->judul; ?></td>
+    <td><?= $d->penulis; ?></td>
+    <td><?= $d->nama_kategori; ?></td>
+    <td><?= $d->stok; ?></td>
 </tr>
 
 <?php endforeach; ?>

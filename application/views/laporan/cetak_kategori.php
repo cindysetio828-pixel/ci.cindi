@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Cetak Laporan Peminjaman</title>
+<title>Cetak Laporan Kategori</title>
 
 <style>
+
 body{
     font-family:Arial;
 }
@@ -18,50 +18,37 @@ table{
     border-collapse:collapse;
 }
 
-table, th, td{
+table,th,td{
     border:1px solid black;
 }
 
-th, td{
+th,td{
     padding:8px;
     text-align:center;
 }
 
-@media print{
-    button{
-        display:none;
-    }
-}
 </style>
 
 </head>
 
 <body>
 
-<h3>LAPORAN PEMINJAMAN</h3>
-
-<?php if(!empty($bulan)): ?>
-<p>Bulan: <?= $bulan; ?></p>
-<?php endif; ?>
+<h3>LAPORAN KATEGORI</h3>
 
 <table>
 
 <tr>
     <th>No</th>
-    <th>Kode</th>
-    <th>Nama</th>
-    <th>Tanggal</th>
-    <th>Status</th>
+    <th>ID Kategori</th>
+    <th>Nama Kategori</th>
 </tr>
 
 <?php $no=1; foreach($data as $d): ?>
 
 <tr>
     <td><?= $no++; ?></td>
-    <td><?= $d->kode_peminjaman; ?></td>
-    <td><?= $d->Nama; ?></td>
-    <td><?= $d->tanggal_pinjam; ?></td>
-    <td><?= $d->status; ?></td>
+    <td><?= $d->id; ?></td>
+    <td><?= $d->nama_kategori; ?></td>
 </tr>
 
 <?php endforeach; ?>
@@ -71,8 +58,7 @@ th, td{
 <br><br>
 
 <p style="text-align:right;">
-Tangerang, <?= date('d-m-Y'); ?>
-<br><br><br>
+Tangerang, <?= date('d-m-Y'); ?><br><br><br>
 (Admin)
 </p>
 

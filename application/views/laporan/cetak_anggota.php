@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Cetak Laporan Peminjaman</title>
+<title>Cetak Laporan Anggota</title>
 
 <style>
 body{
@@ -18,19 +17,13 @@ table{
     border-collapse:collapse;
 }
 
-table, th, td{
+table,th,td{
     border:1px solid black;
 }
 
-th, td{
+th,td{
     padding:8px;
     text-align:center;
-}
-
-@media print{
-    button{
-        display:none;
-    }
 }
 </style>
 
@@ -38,19 +31,18 @@ th, td{
 
 <body>
 
-<h3>LAPORAN PEMINJAMAN</h3>
-
-<?php if(!empty($bulan)): ?>
-<p>Bulan: <?= $bulan; ?></p>
-<?php endif; ?>
+<h3>LAPORAN ANGGOTA</h3>
 
 <table>
 
 <tr>
     <th>No</th>
-    <th>Kode</th>
+    <th>No Anggota</th>
     <th>Nama</th>
-    <th>Tanggal</th>
+    <th>Alamat</th>
+    <th>No HP</th>
+    <th>Email</th>
+    <th>Tanggal Daftar</th>
     <th>Status</th>
 </tr>
 
@@ -58,9 +50,12 @@ th, td{
 
 <tr>
     <td><?= $no++; ?></td>
-    <td><?= $d->kode_peminjaman; ?></td>
+    <td><?= $d->Nomor_anggota; ?></td>
     <td><?= $d->Nama; ?></td>
-    <td><?= $d->tanggal_pinjam; ?></td>
+    <td><?= $d->Alamat; ?></td>
+    <td><?= $d->Telepon; ?></td>
+    <td><?= $d->Email; ?></td>
+    <td><?= $d->Tanggal_daftar; ?></td>
     <td><?= $d->status; ?></td>
 </tr>
 
@@ -71,8 +66,7 @@ th, td{
 <br><br>
 
 <p style="text-align:right;">
-Tangerang, <?= date('d-m-Y'); ?>
-<br><br><br>
+Tangerang, <?= date('d-m-Y'); ?><br><br><br>
 (Admin)
 </p>
 

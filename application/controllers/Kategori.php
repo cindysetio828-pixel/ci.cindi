@@ -72,4 +72,19 @@ class Kategori extends CI_Controller {
             redirect('kategori');
         }
     }
+
+    public function cetak_kategori()
+    {
+    $kategori = $this->input->get('kategori');
+
+    $this->db->from('kategori');
+
+    if($kategori){
+        $this->db->like('nama_kategori', $kategori);
+    }
+
+    $data['data']=$this->db->get()->result();
+
+    $this->load->view('laporan/cetak_kategori',$data);
+    }
 }

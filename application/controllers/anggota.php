@@ -81,4 +81,11 @@ class Anggota extends CI_Controller {
         $this->anggota_model->update($Nomor_anggota, $data);
         redirect('anggota');
     }
+
+    public function cetak_anggota()
+    {
+    $data['data'] = $this->db->get('anggota')->result();
+
+    $this->load->view('laporan/cetak_anggota', $data);
+    }
 }
