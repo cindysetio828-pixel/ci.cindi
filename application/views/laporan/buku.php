@@ -6,7 +6,7 @@
 
 <select name="kategori" class="form-control w-25">
 
-<option value="">Semua Kategori</option>
+<option value="">---Semua Kategori---</option>
 
 <?php foreach($kategori as $k): ?>
 
